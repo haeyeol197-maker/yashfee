@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Yashfa 💌</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    font-family: "Trebuchet MS", sans-serif;
+    background:
+      radial-gradient(circle at 15% 20%, rgba(255, 20, 147, .28), transparent 25%),
+      radial-gradient(circle at 85% 80%, rgba(30, 144, 255, .25), transparent 25%),
+      linear-gradient(135deg, #050509, #130713, #080d18);
+    color: white;
+  }
+
+  .sparkle {
+    position: fixed;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    animation: float 4s infinite ease-in-out;
+    opacity: .8;
+  }
+  .s1 { left: 12%; top: 20%; background:#ff3b81; }
+  .s2 { left: 82%; top: 18%; background:#38a8ff; animation-delay:1s; }
+  .s3 { left: 20%; top: 78%; background:#ffe45c; animation-delay:2s; }
+  .s4 { left: 88%; top: 70%; background:#ff334f; animation-delay:1.5s; }
+
+  @keyframes float {
+    50% { transform: translateY(-22px) scale(1.5); opacity: .35; }
+  }
+
+  .card {
+    width: min(90%, 560px);
+    padding: 42px 30px;
+    text-align: center;
+    border: 1px solid rgba(255,255,255,.18);
+    border-radius: 30px;
+    background: rgba(8, 8, 16, .72);
+    backdrop-filter: blur(16px);
+    box-shadow: 0 0 45px rgba(255, 20, 147, .18), 0 0 80px rgba(30,144,255,.08);
+    animation: appear 1s ease;
+  }
+
+  @keyframes appear {
+    from { opacity:0; transform: translateY(25px) scale(.96); }
+    to { opacity:1; transform: translateY(0) scale(1); }
+  }
+
+  .heart {
+    font-size: 45px;
+    animation: pulse 1.6s infinite;
+  }
+  @keyframes pulse {
+    50% { transform: scale(1.15); }
+  }
+
+  h1 {
+    margin: 8px 0 4px;
+    font-size: clamp(32px, 8vw, 54px);
+    background: linear-gradient(90deg,#ff4f91,#fff,#49a9ff,#ffe45c);
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+
+  .subtitle {
+    color: #cfcfe7;
+    margin-bottom: 28px;
+    font-size: 15px;
+  }
+
+  .message {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #f7f4fb;
+  }
+
+  .highlight {
+    color: #ff72aa;
+    font-weight: bold;
+  }
+
+  button {
+    margin-top: 28px;
+    border: none;
+    border-radius: 999px;
+    padding: 13px 25px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    color: white;
+    background: linear-gradient(90deg,#ff2f76,#6d55ff,#168dff);
+    box-shadow: 0 8px 25px rgba(255,47,118,.25);
+    transition: .25s;
+  }
+  button:hover { transform: translateY(-3px) scale(1.03); }
+
+  #extra {
+    display: none;
+    margin-top: 20px;
+    color: #ffe45c;
+    font-weight: bold;
+  }
+</style>
+</head>
+<body>
+  <span class="sparkle s1"></span>
+  <span class="sparkle s2"></span>
+  <span class="sparkle s3"></span>
+  <span class="sparkle s4"></span>
+
+  <main class="card">
+    <div class="heart">💗</div>
+    <h1>Yashfa</h1>
+    <div class="subtitle">just a random little reminder ✨</div>
+
+    <div class="message">
+      Thank you for making me <span class="highlight">happy when I'm sad</span>,
+      for making my days a little brighter, and for always being someone
+      I can share everything with. 🫶🏻<br><br>
+
+      I genuinely love that I can tell you things without overthinking.
+      Thank you for being there, for listening, laughing with me,
+      and making ordinary days feel better. 💌<br><br>
+
+      You're not just my friend — you're my <span class="highlight">best friend</span>.
+      I'm really grateful to have you. 💋
+    </div>
+
+    <button onclick="showLove()">one more thing 👀</button>
+    <div id="extra">You're stuck with me now. 😭💗</div>
+  </main>
+
+<script>
+function showLove() {
+  document.getElementById("extra").style.display = "block";
+}
+</script>
+</body>
+</html>
